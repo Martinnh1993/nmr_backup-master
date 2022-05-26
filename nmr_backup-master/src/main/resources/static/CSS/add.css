@@ -1,0 +1,15 @@
+.form-grid
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,);
+    overflow: hidden;
+}
+.nayeem {
+    display: flex;
+    margin-left: 10%;
+    width: 250px;
+}
+input{
+    margin-left: 10%;
+}

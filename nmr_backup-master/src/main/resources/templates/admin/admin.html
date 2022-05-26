@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin page</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+</head>
+<body>
+<header id="home">
+    <!--navbar-->
+    <nav class="navbar">
+        <div class="nav-center">
+            <!--nav header-->
+            <div class="nav-header">
+
+                <a href="/">
+                    <p id="NMR"><span id="nordic">Nordic <br></span> <span id="motorhome">Motorhome <br></span> <span
+                            id="rental">Rental</span></p>
+                </a>
+                <button type="button" class="nav-toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <!--end of nav header-->
+
+            <!--nav links-->
+            <ul class="nav-links" id="nav-links">
+                <!--single link-->
+
+                <li>
+                    <a href="/viewEmployeePage" class="nav-link" >Employees</a>
+                </li>
+                </li>
+                    <a href="/viewMotorhomePage" class="nav-link" >Motorhomes</a>
+                </li>
+                </li>
+                <a href="/viewAccessoryPage" class="nav-link" >Accessories</a>
+                </li>
+                <li>
+                    <a href="/viewReservationPage" class="nav-link" >Reservation</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+    <!--HERO SECTION-->
+    <div class="hero">
+        <div class="hero-banner">
+            <!--            <p th:text="${developer.toString()}"></p>-->
+
+            <h1>Welcome <p th:text="${admin}"></p></h1>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>

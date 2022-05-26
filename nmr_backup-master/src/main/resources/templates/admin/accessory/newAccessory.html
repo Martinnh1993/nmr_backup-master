@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Accessory</title>
+  <link rel="stylesheet" type="text/css" href="css/global.css">
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+
+<div align="center">
+  <h1>Add New Accessory</h1>
+  <form th:action="@{/saveAccessory}" method="post" th:object="${accessory}">
+
+    <input type="text" name="available" placeholder="Name" class="form-control mb-4 col-2"/>
+    <input type="text" name="name" placeholder="Price per day" class="form-control mb-4 col-2">
+    <input type="text" name="price_per_day" placeholder="Available quantity" class="form-control mb-4 col-2"/>
+    <input type="text" name="rented_out" placeholder="Rented out" class="form-control mb-4 col-2"/>
+    <input type="text" name="total_stock" placeholder="Total stock" class="form-control mb-4 col-2"/>
+
+    <button type="submit" class="btn btn-info col-2">Save Accessory</button>
+    <a th:href = "@{/viewAccessoryPage}" class="btn btn-secondary col-2"> Back </a>
+
+  </form>
+
+</div>
+
+</body>
+<html>

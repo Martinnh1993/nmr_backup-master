@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Employee</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+
+    <div align="center">
+        <h1>Add new Employee</h1>
+        <form th:action="@{/saveEmployee}" method="post" th:object="${employee}">
+
+            <input type="text" name="firstName" placeholder="Firstname" class="form-control mb-4 col-2"/>
+            <input type="text" name="lastName" placeholder="Lastname" class="form-control mb-4 col-2">
+            <input type="text" name="phoneNr" placeholder="Phone Nr" class="form-control mb-4 col-2"/>
+            <input type="text" name="email" placeholder="Email" class="form-control mb-4 col-2"/>
+            <input type="text" name="address" placeholder="Address" class="form-control mb-4 col-2"/>
+            <input type="text" name="city" placeholder="City" class="form-control mb-4 col-2"/>
+            <input type="text" name="jobTitle" placeholder="Job Title" class="form-control mb-4 col-2"/>
+
+            <button type="submit" class="btn btn-info col-2">Save Employee</button>
+            <a th:href = "@{/viewEmployeePage}" class="btn btn-secondary col-2"> Back </a>
+
+        </form>
+
+    </div>
+
+</body>
+<html>

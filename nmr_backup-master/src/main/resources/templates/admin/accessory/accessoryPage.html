@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Accessories</title>
+  <link rel="stylesheet" type="text/css" href="css/global.css">
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+<h1>Accessories</h1>
+<a th:href = "@{/showNewAccessoryForm}" class="btn btn-primary btn-sm mb-3"> Add Accessory </a>
+<a th:href = "@{/admin}" class="btn btn-secondary btn-sm mb-3"> Back to admin page </a>
+<table  class="table table-striped table-responsive-md">
+
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price per day</th>
+    <th scope="col">Available</th>
+    <th scope="col">Rented out</th>
+    <th scope="col">Total stock</th>
+    <th scope="col">Actions</th>
+
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="accessory: ${listOfAccessories}">
+    <td th:text="${accessory.id}"></td>
+    <td th:text="${accessory.name}"></td>
+    <td th:text="${accessory.pricePerDay}"></td>
+    <td th:text="${accessory.available}"></td>
+    <td th:text="${accessory.rentedOut}"></td>
+    <td th:text="${accessory.totalStock}"></td>
+    <td>
+      <a th:href = "@{/showAccessoryUpdateForm/{id}(id=${accessory.id})}" class="btn btn-secondary btn-sm"> Update </a>
+      <a th:href = "@{/deleteAccessory/{id}(id=${accessory.id})}" class="btn btn-danger btn-sm"> Delete </a>
+    </td>
+
+  </tr>
+
+  </tbody>
+</table>
+<!--
+<div class="container my-2">
+
+    <h1>Employees List</h1>
+
+        <a th:href = "@{/newEmployee}" class="btn btn-primary btn-sm mb-3"> Add Employee </a>-->
+<!--border="1" class="table table-striped table-responsive-md">
+    <
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Date of Birth</th>
+            <th>Phone Nr</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Job Title</th>
+        </tr>
+    </thead>
+
+
+
+    <tr th:each="employee: ${listOfEmployees}">
+            /*@thymesVar id="firstname" type=""*/
+            <td th:text="${employee.firstname}"></td>
+            <td th:text="${employee.lastname}"></td>
+            <td th:text="${employee.dob}"></td>
+            <td th:text="${employee.phone_nr}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.address}"></td>
+            <td th:text="${employee.city}"></td>
+            <td th:text="${employee.job_title}"></td>
+    </tr>
+</table>
+</div>
+-->
+</body>
+</html>
